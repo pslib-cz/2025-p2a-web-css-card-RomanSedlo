@@ -26,9 +26,55 @@
         margin: 1rem; /* without scaling */
         padding: 1em;
     }
+    p {
+        margin: 0;
+    }
+    .card__header {
+        margin-bottom: 2em;
+    }
+    .card__body {
+        margin-bottom: 2em;
+    }
+    .goodboy {
+        list-style-image: url(../images/check.svg);
+    }
+    .badboy {
+        list-style-image: url(../images/cross.svg);
+    }
+    .card__big {
+        font-size: xx-large;
+        margin-bottom: 0.5em;
+    }
+    .card__kindaBig {
+        font-size: x-large;
+        margin-bottom: 0.5em;
+    }
+    .button {
+        display: block;
+        padding: 1em;
+        background-color: var(--primary);
+        border-radius: 6px;
+        text-align: center;
+    }
+    .card__button {
+        text-decoration: none;
+        color: white;
+    }
 }
 
 @layer components {
-    /* todo components */
- 
+    .card--marketer {
+        border: var(--border) solid 1px;
+        border-radius: 12px;
+    }
+    .card--marketer .card__primary {
+        color: var(--primary);
+    }
+    .card--marketer .card__big {
+        color: var(--secondary);
+    }
+    .card--marketer .card__margin {
+        margin-bottom: 0.5em;
+    }
+    
 }
