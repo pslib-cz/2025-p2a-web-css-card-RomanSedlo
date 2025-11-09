@@ -9,7 +9,7 @@
         --secondary: #59bc1c;
         --denied: #ff8686;
         --text: #515959;
-        --border: #59de0c;
+        --border: #e4e4e4;
     }
     .main {
         display: flow-root;
@@ -34,6 +34,13 @@
     }
     .card__body {
         margin-bottom: 2em;
+    }
+    ul {
+        padding-left: 1.5rem;
+        margin-top: 2.5em;
+    }
+    li {
+        margin-bottom: 1em;
     }
     .goodboy {
         list-style-image: url(../images/check.svg);
@@ -73,8 +80,13 @@
     .card--marketer .card__big {
         color: var(--secondary);
     }
+    .card--marketer .card__padding {
+        padding: 1em;
+    }
     .card--marketer .card__margin {
         margin-bottom: 0.5em;
     }
-    
+    .card--marketer .card__margin--2 {
+        margin-bottom: 2em;
+    }
 }
