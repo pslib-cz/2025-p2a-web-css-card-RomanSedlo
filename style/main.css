@@ -12,7 +12,16 @@
         --border: #e4e4e4;
     }
     .main {
-        display: flow-root;
+        display: flex;
+        gap: 1rem;
+        flex-wrap: wrap;
+        align-items: flex-start;
+    }
+    figure {
+        max-width: 1rem;
+    }
+    p {
+        margin: 0;
     }
 }
 
@@ -26,36 +35,68 @@
         margin: 1rem; /* without scaling */
         padding: 1em;
     }
-    p {
-        margin: 0;
+    .card--marketer {
+        border: var(--border) 1px;
+        border-style: solid;
+        border-radius: 12px;
     }
-    .card__header {
+    .card--gold {
+        --primary: #F59E0B;
+        --secondary: #92400E;
+        --listcolor: #FEF7D8;
+        background-image: linear-gradient(to bottom, #FEF1C0, #FDE790);
+        border: var(--primary) 4px;
+        border-style: solid;
+        border-radius: 1em;
+        padding-left: 1.5em;
+        padding-right: 1.5em;
+    }
+    .card--marketer .card__header {
         margin-bottom: 2em;
     }
-    .card__body {
+    .card--marketer .card__body {
         margin-bottom: 2em;
     }
-    ul {
-        padding-left: 1.5rem;
-        margin-top: 2.5em;
-    }
-    li {
-        margin-bottom: 1em;
-    }
-    .goodboy {
-        list-style-image: url(../images/check.svg);
-    }
-    .badboy {
-        list-style-image: url(../images/cross.svg);
-    }
-    .card__big {
-        font-size: xx-large;
+    .card--marketer .card__big {
+        font-size: 2.2em;
         margin-bottom: 0.5em;
     }
-    .card__kindaBig {
+    .card--marketer .card__kindaBig {
         font-size: x-large;
         margin-bottom: 0.5em;
     }
+    .card--marketer .card__primary {
+        color: var(--primary);
+    }
+    .card--marketer .card__padding {
+        padding: 1em;
+    }
+    .card--marketer .card__margin {
+        margin-bottom: 0.5em;
+    }
+    .card--marketer .card__margin--2 {
+        margin-bottom: 2em;
+    }
+    .card--gold .card__margin {
+        margin-bottom: 4em;
+    }
+    .card--gold .card__header {
+        text-align: center;
+        color: var(--secondary);
+    }
+    .card--gold .card__header {
+        margin-bottom: 6em;
+    }
+    .card--gold .card__big {
+        font-size: 2.8em;
+        margin: 1em 0 0.4em;
+    }
+    .card--gold .card__margin--top {
+        margin-top: 2em;
+    }
+}
+
+@layer components {
     .button {
         display: block;
         padding: 1em;
@@ -67,26 +108,56 @@
         text-decoration: none;
         color: white;
     }
-}
-
-@layer components {
-    .card--marketer {
-        border: var(--border) solid 1px;
-        border-radius: 12px;
-    }
-    .card--marketer .card__primary {
-        color: var(--primary);
-    }
     .card--marketer .card__big {
         color: var(--secondary);
     }
-    .card--marketer .card__padding {
+    ul {
+        padding-left: 1.5rem;
+        margin-top: 2.5em;
+    }
+    li {
+        margin-bottom: 1em;
+    }
+    .card--marketer .goodboy {
+        list-style-image: url(../images/check.svg);
+    }
+    .card--marketer .badboy {
+        list-style-image: url(../images/cross.svg);
+    }
+
+    .card--gold ul {
+        list-style-type: none;
+        padding-left: 0rem;
+        margin-top: 4em;
+    }
+    .card--gold li {
         padding: 1em;
+        background-color: var(--listcolor);
+        border-radius: 0.5em;
+        margin: 0.5em;
     }
-    .card--marketer .card__margin {
-        margin-bottom: 0.5em;
+    .card--gold .cost {
+        background-color: white;
+        padding: 2em 3em 2em 3em;
+        text-align: center;
+        border-radius: 1em;
+        box-shadow: 0px 4px 2em #e6d284;
     }
-    .card--marketer .card__margin--2 {
-        margin-bottom: 2em;
+    .card--gold .text--gigachad {
+        font-size: 3.6em;
+        margin-top: 0.4em;
+        color: var(--primary);
+    }
+    .card--gold .special {
+        color: white;
+        padding: 0.5em 2em 0.5em 2em;
+        background: var(--primary);
+        border-radius: 2em;
+        box-shadow: 0px 1px 1em #ecd06b;
+    }
+    .card--gold .button {
+        border-radius: 12px;
+        font-size: 1.2em;
+        margin: 1.6em 0.5em 1em 0.5em;
     }
 }
